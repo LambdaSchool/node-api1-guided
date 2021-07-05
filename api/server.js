@@ -23,7 +23,9 @@ server.get('/api/dogs', (req, res) => {
 
   Dog.findAll()
     .then()
-    .catch()
+    .catch(err => {
+      res.status(500)
+    })
 
   res.status(200).json({ message: 'fetching all the dogs'})
 })
