@@ -27,7 +27,9 @@ server.post('/api/dogs', (req, res) => {
   res.status(201).json({ message: 'creating a new dog using req.body as raw material'})
 })
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
-
+server.put('/api/dogs/:id', (req, res) => {
+  
+})
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 // EXPOSING THE SERVER TO OTHER MODULES
