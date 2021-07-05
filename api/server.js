@@ -1,5 +1,5 @@
 // IMPORTS AT THE TOP
-
+const express = require()
 // INSTANCE OF EXPRESS APP
 
 // GLOBAL MIDDLEWARE
