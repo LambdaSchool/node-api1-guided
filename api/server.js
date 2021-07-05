@@ -71,7 +71,13 @@ server.put('/api/dogs/:id', (req, res) => {
   if (!name || !weight) {
     res.status(422).json({ message: 'name and weight are required' })
   } else {
-    
+    Dog.update(id, { name, weight })
+      .then()
+      .catch(err => {
+        res.status(500).json({
+          message: err.message,
+        })
+      })
   }
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
