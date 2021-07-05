@@ -52,7 +52,8 @@ server.post('/api/dogs', (req, res) => {
   if (!req.body.name || !req.body.weight) {
     res.status(422).json({ message: 'name and weight are required' })
   } else {
-
+    const { name, weight } = req.body
+    console.log(name, weight)
   }
 })
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
