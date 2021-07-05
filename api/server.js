@@ -25,7 +25,7 @@ server.get('/api/dogs', (req, res) => {
     .then()
     .catch(err => {
       res.status(500).json({
-        message: 'something went horrible'
+        message: err.message,
       })
     })
 
