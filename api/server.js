@@ -24,10 +24,13 @@ server.get('/api/dogs/:id', (req, res) => {
   // handle errors
   const id = req.params.id  // const { id } = req.params
   Dog.findById(id)
-    .then()
+    .then(dog => {
+      
+    })
     .catch(err => {
       res.status(500).json({
         message: err.message,
+        custom: 'something crashed getting dog by id'
       })
     })
 })
