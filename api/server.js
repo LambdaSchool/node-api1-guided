@@ -30,7 +30,7 @@ server.get('/api/dogs/:id', (req, res) => {
           message: `dog with id ${id} does not exist`
         })
       } else {
-
+        res.status(200).json(dog)
       }
     })
     .catch(err => {
