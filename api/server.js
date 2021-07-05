@@ -50,7 +50,9 @@ server.get('/api/dogs', (req, res) => {
 server.post('/api/dogs', (req, res) => {
   // validate req.body and handle bad data accordingly
   if (!req.body.name || !req.body.weight) {
-    res.status(422).json({ })
+    res.status(422).json({ message: 'name and weight are required' })
+  } else {
+
   }
 })
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
