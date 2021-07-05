@@ -72,7 +72,9 @@ server.put('/api/dogs/:id', (req, res) => {
     res.status(422).json({ message: 'name and weight are required' })
   } else {
     Dog.update(id, { name, weight })
-      .then()
+      .then(updated => {
+        console.log(updated)
+      })
       .catch(err => {
         res.status(500).json({
           message: err.message,
