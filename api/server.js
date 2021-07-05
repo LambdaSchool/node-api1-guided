@@ -49,7 +49,9 @@ server.get('/api/dogs', (req, res) => {
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
   // validate req.body and handle bad data accordingly
-  if 
+  if (!req.body.name || !req.body.weight) {
+    res.status(422).json({ })
+  }
 })
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 server.put('/api/dogs/:id', (req, res) => {
