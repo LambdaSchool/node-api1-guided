@@ -25,7 +25,13 @@ server.get('/api/dogs/:id', (req, res) => {
   const id = req.params.id  // const { id } = req.params
   Dog.findById(id)
     .then(dog => {
-      
+      if (!dog) {
+        res.status(404).json({
+          message: `dog with id ${id} does not exist`
+        })
+      } else {
+
+      }
     })
     .catch(err => {
       res.status(500).json({
