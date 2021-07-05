@@ -3,7 +3,7 @@ const express = require('express')
 
 
 // INSTANCE OF EXPRESS APP
-const server = 
+const server = express()
 
 // GLOBAL MIDDLEWARE
 
@@ -17,3 +17,4 @@ const server =
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 // EXPOSING THE SERVER TO OTHER MODULES
+
