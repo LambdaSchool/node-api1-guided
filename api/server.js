@@ -73,8 +73,10 @@ server.put('/api/dogs/:id', (req, res) => {
   } else {
     Dog.update(id, { name, weight })
       .then(updated => {
-        if (updated) {
-          
+        if (!updated) {
+          res.status(404).json({ message: `dog with id ${id} not there`})
+        } else {
+          res.json(updated)
         }
       })
       .catch(err => {
