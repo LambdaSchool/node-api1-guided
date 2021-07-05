@@ -53,7 +53,7 @@ server.post('/api/dogs', (req, res) => {
     res.status(422).json({ message: 'name and weight are required' })
   } else {
     const { name, weight } = req.body
-    console.log(name, weight)
+    Dog.create()
   }
 })
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
