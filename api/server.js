@@ -16,6 +16,8 @@ server.get('/api/hello', (req, res) => {
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 server.get('/api/dogs/:id', (req, res) => {
+  // pull the id parameter from the path
+  // use that id to call the database function findById
   res.status(200).json({ message: 'fetching dog by its id' })
 })
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
