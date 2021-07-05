@@ -73,7 +73,9 @@ server.put('/api/dogs/:id', (req, res) => {
   } else {
     Dog.update(id, { name, weight })
       .then(updated => {
-        console.log(updated)
+        if (updated) {
+          
+        }
       })
       .catch(err => {
         res.status(500).json({
