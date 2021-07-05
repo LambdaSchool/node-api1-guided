@@ -1,6 +1,6 @@
 // IMPORTS AT THE TOP
 const express = require('express')
-const Dog = require()
+const Dog = require('./dog-model')
 // INSTANCE OF EXPRESS APP
 const server = express()
 
