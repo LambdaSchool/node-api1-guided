@@ -1,6 +1,6 @@
 // IMPORTS AT THE TOP
 const express = require('express')
-
+const Dog = require()
 // INSTANCE OF EXPRESS APP
 const server = express()
 
