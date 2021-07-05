@@ -1,2 +1,2 @@
 // import the server and start it
-console.log('hello world!!!!!!!!!!')
+console.log('hello world!')

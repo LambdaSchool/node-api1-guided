@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "server": "node",
+    "server": "nodemon index.js",
     "ketchup": "git fetch && git reset --hard origin/lecture",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
