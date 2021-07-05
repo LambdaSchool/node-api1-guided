@@ -12,5 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/LambdaSchool/node-api1-guided.git"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.30.0"
+  }
 }
