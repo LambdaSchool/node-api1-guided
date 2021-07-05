@@ -19,6 +19,7 @@
     "nodemon": "^2.0.9"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "shortid": "^2.2.16"
   }
 }
