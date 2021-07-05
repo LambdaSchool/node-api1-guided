@@ -1,4 +1,4 @@
-const shortid = require('shortid')
+const shortid = require('shortid') // import shortid from 'shortid'
 
 let dogs = [
   { id: shortid.generate(), name: 'Captain', weight: 25 },
