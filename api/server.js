@@ -11,6 +11,7 @@ const server = express()
 // [GET] / (Hello World endpoint)
 server.get('/api/hello', (req, res) => {
   console.log(req.method)
+  res.status(200).json({  })
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
