@@ -93,7 +93,7 @@ server.delete('/api/dogs/:id', async (req, res) => {
     if (!result) {
       res.status(404).json({ message: `dog with id ${req.params.id} not there`})
     } else {
-      
+      res.json(result)
     }
   } catch (err) {
     res.status(500).json({
