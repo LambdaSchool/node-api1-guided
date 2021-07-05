@@ -17,5 +17,8 @@
   "devDependencies": {
     "eslint": "^7.30.0",
     "nodemon": "^2.0.9"
+  },
+  "dependencies": {
+    "shortid": "^2.2.16"
   }
 }
