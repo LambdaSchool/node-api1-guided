@@ -68,7 +68,11 @@ server.post('/api/dogs', (req, res) => {
 server.put('/api/dogs/:id', (req, res) => {
   const { id } = req.params
   const { name, weight } = req.body
-  
+  if (!name || !weight) {
+    res.status(422).json({ message: 'name and weight are required' })
+  } else {
+    
+  }
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', (req, res) => {
