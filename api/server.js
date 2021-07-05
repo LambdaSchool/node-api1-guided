@@ -16,7 +16,7 @@ server.get('/api/hello', (req, res) => {
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 server.get('/api/dogs/:id', (req, res) => {
-  res.status(200).json({ message: 'fetching dog by its id'})
+  res.status(200).json({ message: 'fetching dog by its id' })
 })
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
@@ -24,14 +24,16 @@ server.get('/api/dogs', (req, res) => {
   Dog.findAll()
     .then()
     .catch(err => {
-      res.status(500)
+      res.status(500).json({
+        message: 'something went horrible'
+      })
     })
 
-  res.status(200).json({ message: 'fetching all the dogs'})
+  res.status(200).json({ message: 'fetching all the dogs' })
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
-  res.status(201).json({ message: `creating ${req.body.name}`})
+  res.status(201).json({ message: `creating ${req.body.name}` })
 })
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 server.put('/api/dogs/:id', (req, res) => {
