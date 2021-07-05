@@ -22,7 +22,8 @@ server.get('/api/dogs/:id', (req, res) => {
   // if no dog send a 404
   // send the dog
   // handle errors
-  
+  const id = req.params.id  // const { id } = req.params
+  console.log(id)
 })
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
