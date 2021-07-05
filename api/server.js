@@ -20,16 +20,15 @@ server.get('/api/dogs/:id', (req, res) => {
 })
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
-
   Dog.findAll()
-    .then()
+    .then(dogs => {
+      res.status(200).json(dogs)
+    })
     .catch(err => {
       res.status(500).json({
         message: err.message,
       })
     })
-
-  res.status(200).json({ message: 'fetching all the dogs' })
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 server.post('/api/dogs', (req, res) => {
