@@ -20,6 +20,7 @@ server.get('/api/dogs/:id', (req, res) => {
 })
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
+  res.status(200).json('foobar')
   Dog.findAll()
     .then(dogs => {
       res.status(200).json(dogs)
